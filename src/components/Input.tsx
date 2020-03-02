@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function Input({ label, ...inputProps }) {
+type InputProps = {
+  label: string;
+};
+
+export default function Input({ label, ...inputProps }: InputProps) {
   return (
     <div className="flex flex-col">
       <div className="text-gray-600">{label}</div>
