@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "./components/Input";
+import Button from "./components/Button";
 import Select, { SelectOption } from "./components/Select";
 import { useForm } from "./hooks/useForm";
 
@@ -16,12 +17,9 @@ function App() {
       <Input label="Name" {...bind("name")} />
       <Input label="Email" {...bind("email")} />
       <Select options={options} label="Select one option" {...bind("sex")} />
-      <button
-        className="p-2 bg-gray-200 rounded-lg mt-2 px-6 hover:shadow-md"
-        onClick={() => console.log(values)}
-      >
-        click
-      </button>
+      <Button onClick={() => console.log(values)} className="mt-6">
+        <span>Click</span>
+      </Button>
     </div>
   );
 }
